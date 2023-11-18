@@ -127,6 +127,8 @@ const getAllOrders = async () => {
   } catch (error) {
     console.log(error);
     $q.loading.hide();
+  } finally {
+    updateFilteredOrders();
   }
 };
 
