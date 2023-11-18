@@ -1,9 +1,7 @@
 import { api } from "boot/axios";
 
-export const getOrdersByDate = async (date) => {
-  var resp = await api.get(
-    `orders.json?orderBy="date"&startAt="${date} 00:00:00"&endAt="${date} 11:59:59"`
-  );
+export const getOrders = async () => {
+  var resp = await api.get(`orders.json`);
   return resp.data;
 };
 

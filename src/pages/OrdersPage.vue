@@ -76,7 +76,7 @@
 import { ref, computed, onMounted, watch } from "vue";
 import { useQuasar, date } from "quasar";
 import CardOrder from "src/components/CardOrder.vue";
-import { getOrdersByDate, editOrder } from "src/services/ordersServices";
+import { getOrders, editOrder } from "src/services/ordersServices";
 
 const data = ref([]);
 const $q = useQuasar();
@@ -117,11 +117,9 @@ watch(panel, updateFilteredOrders);
 
 const getAllOrders = async () => {
   try {
-    const timeStamp = Date.now();
-    const dateNow = date.formatDate(timeStamp, "YYYY-MM-DD");
     $q.loading.show();
     data.value = [];
-    const response = await getOrdersByDate(dateNow);
+    const response = await getOrders();
     for (const id of Object.keys(response)) {
       data.value.push({ id, ...response[id] });
     }
