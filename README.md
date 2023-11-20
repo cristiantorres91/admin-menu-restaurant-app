@@ -1,6 +1,13 @@
-# admin menu app (admin-menu-app)
+# admin menu app 
 
-admin menu app
+
+# Demo
+
+[https://admin-menu-restaurant.netlify.app/](https://admin-menu-restaurant.netlify.app/#/)
+ ```bash
+user: menu-app
+password: admin123*
+```
 
 ## Configuration
 1. create file .env
@@ -43,6 +50,13 @@ you can import the data-app.json file in src>fake-data) replace in .env API_APP
 }
 ```
 3. Create a new project to host images in cloudinary and replace in the .env file API_CLOUDINARY
+
+## Authors
+
+- [@cristiantorres91](https://www.github.com/cristiantorres91)
+
+## Client Menu App 
+https://github.com/cristiantorres91/client-menu-restaurant-app
 
 ### Install the dependencies
 ```bash
